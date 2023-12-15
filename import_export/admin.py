@@ -745,9 +745,10 @@ class ExportMixin(BaseExportMixin, ImportExportMixinBase):
         class ExportChangeList(ChangeList):
             def get_results(self, request):
                 """
-                We override this method because we only call ChangeList.get_queryset()
-                so we don't need anything from this method. The get_results() gets called during
-                ChangeList.__init__() and we do want to avoid unnecessary COUNT queries.
+                We override this method because we only call
+                ChangeList.get_queryset() so we don't need anything from this method.
+                The get_results() gets called during ChangeList.__init__() and we do
+                want to avoid unnecessary COUNT queries.
                 """
                 pass
 
